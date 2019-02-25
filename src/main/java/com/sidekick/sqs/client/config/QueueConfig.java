@@ -1,4 +1,4 @@
-package com.sidekick.sqs.client;
+package com.sidekick.sqs.client.config;
 
 import java.util.ArrayList;
 import java.util.List;

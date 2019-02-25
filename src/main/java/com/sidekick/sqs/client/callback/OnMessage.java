@@ -1,4 +1,4 @@
-package com.sidekick.sqs.client;
+package com.sidekick.sqs.client.callback;
 
 import software.amazon.awssdk.services.sqs.model.Message;
 

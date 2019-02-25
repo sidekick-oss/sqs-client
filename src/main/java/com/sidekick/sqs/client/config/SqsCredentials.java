@@ -1,22 +1,22 @@
-package com.sidekick.sqs.client;
+package com.sidekick.sqs.client.config;
 
-public final class Credentials {
+public final class SqsCredentials {
 
     private String client;
     private String secret;
     private String region;
 
-    public Credentials withClient(String client) {
+    public SqsCredentials withClient(String client) {
         this.setClient(client);
         return this;
     }
 
-    public Credentials withSecret(String secret) {
+    public SqsCredentials withSecret(String secret) {
         this.setSecret(secret);
         return this;
     }
 
-    public Credentials withRegion(String region) {
+    public SqsCredentials withRegion(String region) {
         this.setRegion(region);
         return this;
     }

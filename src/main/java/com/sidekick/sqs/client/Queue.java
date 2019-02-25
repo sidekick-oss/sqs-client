@@ -1,5 +1,9 @@
 package com.sidekick.sqs.client;
 
+import com.sidekick.sqs.client.callback.OnError;
+import com.sidekick.sqs.client.callback.OnMessage;
+import com.sidekick.sqs.client.config.SqsCredentials;
+import com.sidekick.sqs.client.config.QueueConfig;
 import com.sidekick.sqs.client.exception.MessageException;
 import com.sidekick.sqs.client.exception.QueueException;
 import com.sidekick.sqs.client.util.Json;
@@ -17,7 +21,7 @@ import java.util.stream.IntStream;
 public class Queue {
 
     private QueueConfig config;
-    private Credentials credentials;
+    private SqsCredentials credentials;
     private SqsClient client;
     private TaskQueue queueTask;
 
@@ -25,7 +29,7 @@ public class Queue {
     private OnMessage onMessage = null; // Code block to execute when a message was received
     private OnError onError = null; // Code block to execute when an error occurs
 
-    public Queue(QueueConfig config, Credentials credentials) {
+    public Queue(QueueConfig config, SqsCredentials credentials) {
         super();
         this.config = config;
         this.credentials = credentials;
