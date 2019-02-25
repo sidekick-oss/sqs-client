@@ -36,6 +36,10 @@ public class Queue {
         init();
     }
 
+    public SqsClient getClient() {
+        return client;
+    }
+
     public void receive() {
         receive(this.onMessage, this.onError);
     }
